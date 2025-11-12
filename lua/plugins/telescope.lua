@@ -11,6 +11,13 @@ return {
 
 	keys = {
 		{
+			"<leader>cc",
+			function()
+				require("telescope.builtin").colorscheme()
+			end,
+			desc = "Telescope colorscheme",
+		},
+		{
 			"<leader>ff",
 			function()
 				require("telescope.builtin").find_files()
@@ -58,6 +65,11 @@ return {
 		telescope.setup({
 			extensions = {
 				doodle = {},
+			},
+			pickers = {
+				colorscheme = {
+					enable_preview = true,
+				},
 			},
 		})
 		-- load extension

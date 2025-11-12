@@ -49,6 +49,7 @@ end, { desc = "Run sync for plugins with LPM" })
 
 require("alpha")
 require("oil").setup()
+require("bufferline").setup()
 vim.cmd("colorscheme kanagawa-paper")
 vim.cmd("set number")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
