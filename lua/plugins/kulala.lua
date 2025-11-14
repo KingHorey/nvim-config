@@ -1,7 +1,8 @@
 local kulala = require("kulala")
-
 return {
 	"mistweaverco/kulala.nvim",
+	opts = function()
+	end,
 	keys = {
 		{
 			"<leader>Rs",
@@ -27,6 +28,14 @@ return {
 			desc = "Open scratchpad",
 			mode = "n",
 		},
+		{
+			"<leader>Rl",
+			function()
+				kulala.run_last()
+			end,
+			desc = "Run last request",
+			mode = "n"
+		}
 	},
 	ft = { "http", "rest", "websocket" },
 	opts = {

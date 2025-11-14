@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
 			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out, "WarningMsg" },
+			{ out,                            "WarningMsg" },
 			{ "\nPress any key to exit..." },
 		}, true, {})
 		vim.fn.getchar()
@@ -50,7 +50,9 @@ end, { desc = "Run sync for plugins with LPM" })
 require("alpha")
 require("oil").setup()
 require("bufferline").setup()
+require("plugins.kulala")
 vim.cmd("colorscheme kanagawa-paper")
 vim.cmd("set number")
+require("kulala")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
