@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+	priority = 1000,
 	keys = {
 		{
 			"<BS>",
@@ -8,4 +9,5 @@ return {
 			desc = "Open oil at the current file",
 		},
 	},
+
 }

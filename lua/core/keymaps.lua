@@ -52,3 +52,16 @@ vim.keymap.set("n", "<leader>OC", function()
 	local nvim_path = vim.fn.expand("~/.config/nvim")
 	vim.cmd("Oil " .. nvim_path)
 end, { desc = "Open configuration directory" })
+
+vim.keymap.set("n", "<leader>aT", function()
+	vim.cmd("TodoTelescope")
+end, { desc = "show all todos in your project" })
+
+-- window management
+vim.keymap.set("n", "<leader>NT", function()
+	vim.cmd("tabnew")
+end, { desc = "Open new tab" })
+
+-- vim.keymap.set("n", "<leader>NT", function()
+-- 	vim.cmd("tabnew")
+-- end, { desc = "Open new tab" })

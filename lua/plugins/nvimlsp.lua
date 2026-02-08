@@ -36,7 +36,7 @@ return {
 		end
 
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls" },
+			ensure_installed = { "lua_ls", "tailwindcss", "ruff", "eslint" },
 			handlers = {
 				function(server_name)
 					require("lspconfig")[server_name].setup({
@@ -58,6 +58,9 @@ return {
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 		vim.keymap.set("n", "gD", open_definition_in_trouble, { desc = "Open definitions in Trouble" })
 		vim.keymap.set("n", "<leader>gd", preview_definition, { desc = "Preview definition in float" })
+		vim.keymap.set("n", "<leader>sd", function()
+			vim.diagnostic.open_float(nil, { scope = "line" })
+		end, {})
 		vim.keymap.set("n", "<leader>vs", function()
 			open_definition_in_split("vsplit")
 		end, { desc = "Definition in vertical split" })
